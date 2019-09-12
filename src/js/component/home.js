@@ -16,10 +16,10 @@ export class Home extends React.Component {
 				<Jumbo />
 				<div className="container">
 					<div className="row">
-						<Card />
-						<Card />
-						<Card />
-						<Card />
+						<Card content="First Card" />
+						<Card content="Second Card" />
+						<Card content="Third Card" />
+						<Card content="Fourth Card" />
 					</div>
 				</div>
 				<Footer />

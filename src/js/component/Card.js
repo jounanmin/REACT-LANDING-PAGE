@@ -1,7 +1,8 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
+import PropTypes from "prop-types";
 
-export const Card = () => {
+export const Card = props => {
 	return (
 		<div className="col-lg-3 col-md-6 mb-4">
 			<div className="card h-100">
@@ -11,19 +12,19 @@ export const Card = () => {
 					alt=""
 				/>
 				<div className="card-body">
-					<h4 className="card-title">Card title</h4>
-					<p className="card-text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit. Explicabo magni sapiente, tempore debitis beatae
-						culpa natus architecto.
-					</p>
+					<h4 className="card-title text-center">Card title</h4>
+					<p className="card-text text-center">{props.content}</p>
 				</div>
-				<div className="card-footer">
+				<div className="card-footer d-flex justify-content-center">
 					<a href="#" className="btn btn-primary">
-						Find Out More!
+						{props.tucanBtn || "Click Here"}
 					</a>
 				</div>
 			</div>
 		</div>
 	);
+};
+Card.propTypes = {
+	content: PropTypes.string,
+	tucanBtn: PropTypes.string
 };
